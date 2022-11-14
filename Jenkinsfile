@@ -46,4 +46,7 @@ node {
             println(rmsg)
         }
     }
+	stage('Email Notification'){
+		mail bcc: '', body: 'Build is completed', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Notification', to: 'darshan495ra@gmail.com'
+	}
 }
